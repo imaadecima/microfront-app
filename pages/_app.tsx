@@ -8,7 +8,7 @@ type IHeader = {
   count?: number
 }
 
-const Header: ComponentType<IHeader> = dynamic(() => import('fe1/header'), { ssr: false })
+const Header: ComponentType<IHeader> = dynamic(() => import('fe1/header'))
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [count, setCount] = useState(0)
