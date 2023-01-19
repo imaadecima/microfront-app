@@ -1,14 +1,20 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
+import { ComponentType, Dispatch, SetStateAction, useState } from 'react'
 
-const Header = dynamic(() => import('fe1/header'), { ssr: false })
+type IHeader = {
+  setCount?: Dispatch<SetStateAction<number>>
+}
+
+const Header: ComponentType<IHeader> = dynamic(() => import('fe1/header'), { ssr: false })
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [count, setCount] = useState(0)
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
+      <Header setCount={setCount} />
+      <Component {...pageProps} count={count} />
     </>
   )
 }

@@ -4,7 +4,11 @@ import Image from 'next/image'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+interface IHome {
+  count?: number
+}
+
+const Home: NextPage = ({ count }: IHome) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,9 +21,13 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href='https://nextjs.org'>Next.js!</a>
         </h1>
-
         <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.tsx</code>
+          <code>Prueba con un estado de contador: {count}</code>
+          <br />
+          <i>
+            Detalle a tener en cuenta, el estador del contador esta siendo modificado por un{' '}
+            <b> componente remoto</b>, que no existe en el repositorio de la aplicación
+          </i>
         </p>
 
         <div className={styles.grid}>
