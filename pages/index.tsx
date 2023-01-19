@@ -25,8 +25,8 @@ const Home: NextPage = ({ count }: IHome) => {
           <code>Prueba con un estado de contador: {count}</code>
           <br />
           <i>
-            Detalle a tener en cuenta, el estador del contador esta siendo modificado por un{' '}
-            <b> componente remoto</b>, que no existe en el repositorio de la aplicación
+            Detalle a tener en cuenta, el estado del contador esta siendo modificado por un{' '}
+            <b>componente remoto</b>, que no existe en el repositorio de la aplicación <b>Header</b>
           </i>
         </p>
 

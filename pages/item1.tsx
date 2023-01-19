@@ -3,7 +3,9 @@ import React from 'react'
 const Item1 = () => {
   return (
     <>
-      <div>item1</div>
+      <div>
+        <p>Esta página se encuentra dentro del router del repo de App.</p>
+      </div>
       <style jsx>{`
         div {
           display: flex;
